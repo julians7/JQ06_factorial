@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="js/Factorial/factorial.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.pokus').factorial();
+        })
+
+    </script>
+</head>
+<body>
+
+<div class="factorial"></div>
+
+
+<div class="pokus"></div>
+
+
+
+<script src="js/Factorial/factorial.js"></script>
+<script>
+    const options = {}
+    /*Factorial('.factorial', {
+        value: 25,
+        min: 0,
+        max: 100,
+        type: "number",
+        //type: 'range',
+        //style: "background:red;",
+        title: "moj formular",
+        onChange: function (event) {
+            console.log(event.value);
+        },
+        parseText: function (v, f) {
+            if (v < 10)
+                return "<h1 style='color:red;'>kravina</h1>";
+
+            return "rene " + v + "EUR " + f;
+        }
+    });*/
+
+
+
+    $('.factorial').factorial({
+        value: 25,
+        min: 0,
+        max: 100,
+        type: "number",
+        //type: 'range',
+        //style: "background:red;",
+        title: "moj formular",
+        onChange: function (event) {
+            console.log(event.value);
+        },
+        parseText: function (v, f) {
+            if (v < 10)
+                return "<h1 style='color:red;'>kravina</h1>";
+
+            return "rene " + v + "EUR " + f;
+        }
+    })
+
+
+
+
+    /*$('.factorial').factorial({
+        value: 25,
+        min: 20,
+        max: 30,
+        type: "number",
+        style: "background:red;",
+        onChange: function (event) {
+            console.log(event.value)
+        }
+    })*/
+
+</script>
+</body>
+</html>
